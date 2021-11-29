@@ -28,13 +28,13 @@ body {
   font-family: var(--default-font);
   font-weight: var(--default-font-weight);
   font-size: var(--default-font-size);
-  line-height: var(--default-line-height); /*font spacing (line height)*/
-  color: var(--primary-color); /*font color*/
+  line-height: var(--default-line-height); /* font spacing (line height) */
+  color: var(--primary-color); /* font color */
   padding: 20px;
-  margin: 10px; /*margin size*/
+  margin: 10px; /* margin size */
 }
 
-/*assign properties to <h1> <h2> tags (headings)*/
+/* assign properties to <h1> <h2> tags (headings) */
 h1 {
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-1);
@@ -51,8 +51,9 @@ h3 {
   font-weight: var(--font-weight-1);
 }
 
-/*assign properties to <a> tag (anchor)*/
-/*pseudo classes*/
+/* assign properties to <a> tag (anchor) */
+
+/* pseudo classes */
 a {
   color: var(--primary-color);
 }
@@ -62,7 +63,8 @@ a:visited {
   color: var(--primary-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
   color: var(--secondary-color);
@@ -74,44 +76,44 @@ a:active {
   color: var(--secondary-color);
 }
 
-/*____BUTTON*/
-/*pseudo classes*/
+/* ____BUTTON */
 
-button:hover, button:focus {
+/* pseudo classes */
+
+button:hover,
+button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.1;
+  opacity: 0.1; /* reduces the opacity of the button to 80% */
 }
 
-/*____BUTTON*/
-/*pseudo classes*/
+/* ____BUTTON */
 
-button:hover, button:focus {
+/* pseudo classes */
+
+button:hover,
+button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.1;
+  opacity: 0.1; /* reduces the opacity of the button to 80% */
 }
 
-/*____BUTTON*/
-/*classes*/
+/* ____BUTTON */
 
-.button__primary, button {
+/* classes */
+
+.button__primary,
+button {
   /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
+  border: none; /* resets the border */
   display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
+  font-family: inherit; /* takes the font from the outer container */
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* width of the border, type, color */
   transition: 0.9s opacity;
 }
 
@@ -126,13 +128,12 @@ button:hover, button:focus {
   color: white;
 }
 
-/*____NAVIGATION LIST*/
+/* ____NAVIGATION LIST */
 
 .navigation-list__item--active {
   text-decoration: none;
   color: var(--secondary-color);
   opacity: 0.5;
-  /*font-weight: 700;*/
 }
 
 .profile {
@@ -149,16 +150,17 @@ button:hover, button:focus {
   border-radius: 20%;
 }
 
+/* ____FLEXBOX */
 
-/*____FLEXBOX*/
+/*  "*"is a universal selector! */
 
-/*"*"is a universal selector!*/
-/*applies to all html styling elements*/
+/* applies to all html styling elements */
+
 * {
   box-sizing: border-box;
 }
 
-/*create flexbox container*/
+/* create flexbox container */
 .page-header {
   display: flex;
   width: 100%;
@@ -194,49 +196,51 @@ button:hover, button:focus {
   text-align: center;
 }
 
-
-/*GRID*/
+/* GRID */
 
 /* start grid fallback */
 .grid__item {
- display: inline-block;
- width: 33%;
+  display: inline-block;
+  width: 33%;
 }
+
 /* end grid fallback */
 
 @supports (display: grid) {
- .grid {
-   display: grid;
-   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-gap: 20px;
-   margin: 0;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+    grid-gap: 20px;
+    margin: 0;
+  }
 
- }
- .grid__item {
-   background-color: white;
-   width: auto;
-   min-height: auto;
-   text-align: center;
-   border-radius: 10%;
-   padding: 20px;
-   margin: 0;
- }
- .grid__item:last-child {
-   grid-column: 3 / 3;
-   grid-row: 1 / 3;
- }
+  .grid__item {
+    background-color: white;
+    width: auto;
+    min-height: auto;
+    text-align: center;
+    border-radius: 10%;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
 }
 
-/*____ANIMATION*/
+/* ____ANIMATION */
 
 @keyframes color-change-1 {
   0% {
     fill: #a2f2b0;
   }
+
   50% {
     fill: #fcb78a;
   }
+
   100% {
     fill: #aed4d4;
   }
@@ -254,9 +258,11 @@ button:hover, button:focus {
   0% {
     fill: #a2f2b0;
   }
+
   50% {
     fill: #670067;
   }
+
   100% {
     fill: #f6aecf;
   }
@@ -270,33 +276,39 @@ button:hover, button:focus {
   animation-timing-function: linear;
 }
 
-/*____MEDIA QUERIES*/
+/* ____MEDIA QUERIES */
 
 @media all and (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
+
   .profile__portrait {
     width: 300px;
     height: auto;
   }
 }
-@media all and (min-width: 600px) and (max-width: 950px){
+
+@media all and (min-width: 600px) and (max-width: 950px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 950px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
+
   h2 {
     font-size: 18px;
   }
