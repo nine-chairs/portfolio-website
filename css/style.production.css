@@ -45,12 +45,19 @@ h3 {
   font-weight: 700;
 }
 
+/* assign properties to copyright in the footer */
+
+.copyright {
+  font-size: 12px;
+}
+
 /* assign properties to <a> tag (anchor) */
 
-/* pseudo classes */
 a {
   color: #7509a8;
 }
+
+/* pseudo classes */
 
 a:visited {
   /* visited link */
